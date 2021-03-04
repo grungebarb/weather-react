@@ -4,7 +4,7 @@ import Loader from "react-loader-spinner";
 
 export default function Weather(props) {
   function handleResponse(response) {
-    alert(`The weather in ${response.data.name} is ${response.data.main.temp}ºC`);
+    //alert(`The weather in ${response.data.name} is ${response.data.main.temp}ºC`);
   }
   let apiKey = "b89a2bda363f782379e90e985a8aa5e3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
@@ -14,10 +14,10 @@ export default function Weather(props) {
       <h2>Hello from Weather</h2>
       <Loader
         type="Puff"
-        color="#00BFFF"
+        color="white"
         height={100}
         width={100}
-        timeout={3000} //3 secs
+        timeout={3000}secs
       />
     </div>
     );
